@@ -63,6 +63,6 @@ def handle_scrape_admins():
     loop.close()
 
     return jsonify({'result': admins})
-app.run()
+
 
 
