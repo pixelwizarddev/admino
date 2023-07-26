@@ -17,4 +17,4 @@ EXPOSE $80
 ENV FLASK_APP=app.py
 
 # Run the Flask development server
-CMD ["flask", "run", "--host=0.0.0.0"]
+CMD ["python3", "app.py"]
