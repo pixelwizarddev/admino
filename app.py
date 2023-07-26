@@ -49,7 +49,7 @@ async def scrape_admins(channel_usernames):
     await client.disconnect()
     return result.strip()
 
-@app.route('/scrape_admins', methods=['POST'])
+@app.route('/', methods=['POST'])
 def handle_scrape_admins():
     data = request.get_json()
     if 'channel_usernames' not in data:
@@ -61,7 +61,6 @@ def handle_scrape_admins():
     asyncio.set_event_loop(loop)
     admins = loop.run_until_complete(scrape_admins(channel_usernames))
     loop.close()
-app.run(host='0.0.0.0', debug=True)
 
     return jsonify({'result': admins})
 
