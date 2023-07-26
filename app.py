@@ -61,7 +61,7 @@ def handle_scrape_admins():
     asyncio.set_event_loop(loop)
     admins = loop.run_until_complete(scrape_admins(channel_usernames))
     loop.close()
-app.run(host='0.0.0.0', port=port, debug=True)
+app.run(host='0.0.0.0', debug=True)
 
     return jsonify({'result': admins})
 
