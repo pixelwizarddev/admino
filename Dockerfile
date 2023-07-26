@@ -11,7 +11,7 @@ COPY . /app
 RUN pip install -r requirements.txt
 
 # Expose the port on which your Flask app will run
-EXPOSE $PORT
+EXPOSE $80
 
 # Set the environment variable to tell Flask the app.py file to run
 ENV FLASK_APP=app.py
